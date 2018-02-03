@@ -1,3 +1,4 @@
+// icon from  http://material-ui.com
 import Vue from 'vue';
 
 Vue.component('down-icon', {
