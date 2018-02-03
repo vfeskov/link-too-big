@@ -142,15 +142,15 @@ fieldset {
 }
 
 .pulse {
-	animation-name: pulse_animation;
-	animation-duration: 200ms;
-	transform-origin:50% 50%;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
+  animation-name: pulse_animation;
+  animation-duration: 200ms;
+  transform-origin:50% 50%;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 @keyframes pulse_animation {
   0% { transform: scale(0.9); }
   50% { transform: scale(1.1); }
-	100% { transform: scale(1); }
+  100% { transform: scale(1); }
 }
