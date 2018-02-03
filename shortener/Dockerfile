@@ -1,5 +1,5 @@
 # this Dockerfile expects the root of the project to be its context, e.g.:
-# docker build -f shortener/server/Dockerfile .
+# docker build -f shortener/Dockerfile .
 FROM node:8-alpine
 
 RUN npm install -g poi@9.6.8
