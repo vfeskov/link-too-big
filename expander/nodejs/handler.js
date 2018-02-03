@@ -20,11 +20,10 @@ module.exports = class Handler {
       this.respond(301, { Location: link });
     } catch (err) {
       if (err instanceof NotFound) {
-        this.respond(302, { Location: SHORTENER_URL });
-        return;
+        return this.respond(302, { Location: SHORTENER_URL });
       }
       console.error(err);
-      this.respond(500);
+      this.respond(302, { Location: SHORTENER_URL });
     }
   }
 

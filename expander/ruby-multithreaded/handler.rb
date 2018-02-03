@@ -15,13 +15,13 @@ class Handler
     raise NotFound unless method == 'GET' && @path =~ VALID_PATH
     link = DB.get(id)
     raise NotFound unless link
-    redirect link
+    respond 301, "Location: #{link}\r\n"
   rescue NotFound
-    respond 404
+    not_found
   rescue Redis::BaseError => e
     puts e.message
     puts e.backtrace.inspect
-    respond 500
+    not_found
   end
 
   def parse_request
@@ -39,15 +39,6 @@ class Handler
 
   def not_found
     respond 302, "Location: #{ENV['SHORTENER_URL']}\r\n"
-  end
-
-  def internal_server_error(e)
-    puts e
-    respond 500
-  end
-
-  def redirect(link)
-    respond 301, "Location: #{link}\r\n"
   end
 
   def respond(code, extra_headers = '')

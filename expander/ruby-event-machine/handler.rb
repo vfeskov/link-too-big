@@ -40,7 +40,7 @@ class Handler
 
   def internal_server_error(e)
     puts e
-    respond 500
+    not_found
   end
 
   def redirect(link)
