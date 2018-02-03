@@ -1,0 +1,18 @@
+{
+  "name": "shortener-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Vladimir Feskov",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "compression": "^1.7.1",
+    "redis": "^2.8.0",
+    "serve-static": "^1.13.1"
+  }
+}

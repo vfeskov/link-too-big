@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: redis:alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - ./dbdata:/data
+    ports:
+      - 6379:6379
+  shortener:
+    build:
+      context: .
+      dockerfile: shortener/Dockerfile
+    environment:
+      REDIS_URL: redis://db:6379
+      EXPANDER_URL: http://localhost:10000
+    links:
+      - db
+    ports:
+     - 20000:20000
+  expander:
+    build:
+      context: .
+      dockerfile: expander/nodejs/Dockerfile
+    environment:
+      REDIS_URL: redis://db:6379
+      SHORTENER_URL: http://localhost:20000
+    links:
+      - db
+    ports:
+     - 10000:10000

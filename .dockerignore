@@ -1,0 +1,4 @@
+dbdata
+**/.env
+**/node_modules
+**/dist

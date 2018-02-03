@@ -1,0 +1,18 @@
+{
+  "name": "shortener-client",
+  "productName": "Link Too Big",
+  "version": "1.0.0",
+  "description": "Beautiful and highly scalable URL shortener",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "poi",
+    "build": "poi build"
+  },
+  "author": "Vladimir Feskov",
+  "license": "MIT",
+  "devDependencies": {
+    "clipboard": "^1.7.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

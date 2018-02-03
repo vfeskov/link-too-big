@@ -1,0 +1,156 @@
+* {
+  font-family: sans-serif;
+}
+
+svg {
+  fill: currentColor;
+}
+
+html {
+  background: #fcf4f8;
+  font-size: 20px;
+  color: #000;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0.5rem;
+}
+
+input,
+button,
+p {
+  font-size: 1rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  height: 2.25rem;
+}
+
+input {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+input:focus {
+  border: 1px solid #920C58;
+  box-shadow: 0 0 2px #920C58;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: #920C58;
+  color: #fcf4f8;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.app {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  color: #920C58;
+  margin: 2.3rem 0 2.3rem;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.promo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.promo span {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.promo.success {
+  color: #009F00;
+  font-weight: bold;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.error {
+  height: 1.3rem;
+}
+
+.error-msg {
+  align-items: center;
+  color: #f2094b;
+  display: flex;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  padding: 0.2rem 0 0 0.5rem;
+}
+
+.error-msg svg {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.input-line {
+  display: flex;
+  width: 100%;
+}
+
+.input-line input {
+  flex: 1;
+}
+
+.done-wrapper {
+  margin: 1rem 0 3rem;
+  min-height: 5rem;
+}
+
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 200ms;
+	transform-origin:50% 50%;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse_animation {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}

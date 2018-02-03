@@ -1,0 +1,17 @@
+.shortened {
+  margin-bottom: 1.5rem;
+}
+
+.copy {
+  position: relative;
+}
+
+.copy .tooltip {
+  font-size: 0.9rem;
+  left: 0;
+  padding: 0.2rem;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  width: 100%;
+}
