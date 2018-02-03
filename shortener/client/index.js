@@ -53,7 +53,7 @@ new Vue({
           {this.shortened && (
             <div class="pulse">
               <p class="promo success">
-                <down-icon /><span>BOOM IT'S DONE</span><down-icon />
+                <down-icon /><span>BOOM IT&#39;S DONE</span><down-icon />
               </p>
               <shortened text={this.shortened} focus={true} />
             </div>
