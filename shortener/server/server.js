@@ -1,7 +1,7 @@
 const http = require('http');
 const serveStatic = require('serve-static');
 const compression = require('compression');
-const api = require('./api-middleware');
+const api = require('./api');
 const { logger, chain } = require('./util');
 const { NODE_ENV } = process.env;
 
