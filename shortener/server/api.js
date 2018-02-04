@@ -23,10 +23,11 @@ class Handler {
         limit: 1000
       });
       if (!this.linkValid(link)) { throw new BadRequest(); }
-      const id = await db.insert(link);
-      const url = `${EXPANDER_URL}/${encode(id)}`;
-      console.log('Shortened', url);
-      this.respond(201, url);
+      const escaped = encodeURI(link);
+      const id = await db.insert(escaped);
+      const short = `${EXPANDER_URL}/${encode(id)}`;
+      console.log('Shortened', short);
+      this.respond(201, short);
     } catch (err) {
       if (err instanceof BadRequest) { return this.respond(400); }
       if (err instanceof BodyLimitExceeded) { return this.respond(413); }
