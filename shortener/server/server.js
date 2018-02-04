@@ -3,7 +3,11 @@ const serveStatic = require('serve-static');
 const compression = require('compression');
 const api = require('./api');
 const { logger, chain } = require('./util');
-const { NODE_ENV } = process.env;
+
+if (!process.env.EXPANDER_URL) {
+  console.error('EXPANDER_URL environment variable is required');
+  process.exit(1);
+}
 
 const middlewares = [
   logger,
