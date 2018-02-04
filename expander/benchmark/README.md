@@ -24,7 +24,7 @@ One by one each version of `expander` was boot up and benchmarked. Here's how th
 <br/>
 <br/>
 **`ruby-event-machine`:**<br/>
-<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/start-event-machine.png" width="800px" />
+<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/start-ruby-event-machine.png" width="800px" />
 <br/>
 <br/>
 **`nodejs`:**<br/>
