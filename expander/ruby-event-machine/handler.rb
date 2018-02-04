@@ -24,6 +24,7 @@ class Handler
   def parse_headers
     request = @headers.first
     puts request
+    return ['', ''] unless request.is_a?(String)
     method, full_path = request.split(' ')
     path = full_path.split('?').first
     [method, path]

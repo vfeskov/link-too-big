@@ -27,6 +27,7 @@ class Handler
   def parse_request
     request = @client.gets
     puts request
+    return ['', ''] unless request.is_a?(String)
     method, full_path = request.split(' ')
     path = full_path.split('?').first
     [method, path]
