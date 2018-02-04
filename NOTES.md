@@ -45,10 +45,10 @@ I only had to set proxy URL to my API server. In return I got Webpack-powered pi
 
 It even tells you which package to install if you attempt to do something unsupported by default
 
-## [Vue][https://vuejs.org/] + JSX
+## [Vue](https://vuejs.org/) + JSX
 
 Attributes like `v-on:submit.prevent` don't play nicely with JSX unfortunately :(
 
-Having to declare Vue components globally instead of importing them feels kind of crappy
+Having to declare Vue components globally instead of importing them into a variable feels kind of crappy in JSX
 
 [`ref`](https://vuejs.org/v2/api/#vm-refs) attribute is AMAZING
