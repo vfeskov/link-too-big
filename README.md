@@ -10,14 +10,14 @@ I made this to:
 - Explore Ruby core API
 - See how fast Ruby can go, compare different ways vs. NodeJS
 - Explore [Redis](https://redis.io/) database
-- Try out [Poi](poi.js.org) with [Vue](https://vuejs.org/) + JSX
+- Explore [Poi](poi.js.org) with [Vue](https://vuejs.org/) + JSX
 - Make good UX
 
 ## How to run
 
-Install Docker and do: `docker-compose up`.
+Install Docker and do: `docker-compose up`, go to http://localhost:20000
 
-To deploy on AWS EB use: [Dockerrun.aws.json](https://github.com/vfeskov/link-too-big/blob/master/Dockerrun.aws.json)
+It's deployed to AWS EB using: [Dockerrun.aws.json](https://github.com/vfeskov/link-too-big/blob/master/Dockerrun.aws.json)
 
 ## Architecture
 
@@ -43,4 +43,4 @@ MIT, see [LICENSE](https://github.com/vfeskov/link-too-big/blob/master/LICENSE)
 ----------
 
 
-[Support **libi.me** with a star ♥](https://github.com/vfeskov/link-too-big)
+[Leave a star if you like it ♥](https://github.com/vfeskov/link-too-big)
