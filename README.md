@@ -1,6 +1,6 @@
 # Link Too Big [libi.me](https://libi.me)
 
-Ever got tired of them huge links? Just feed them to [libi.me](https://libi.me) and get a super tiny ones instead
+Ever got tired of them huge links? Just feed them to [libi.me](https://libi.me) and get super tiny ones instead
 
 <img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/in-action.gif" width="382px" />
 
@@ -21,7 +21,7 @@ It's deployed to AWS EB using: [Dockerrun.aws.json](https://github.com/vfeskov/l
 
 ## Architecture
 
-TBD
+See [ARCHITECTURE](https://github.com/vfeskov/link-too-big/blob/master/ARCHITECTURE.md)
 
 ## Benchmark
 
@@ -34,7 +34,7 @@ See [BENCHMARK](https://github.com/vfeskov/link-too-big/tree/master/expander/ben
 
 ## Notes
 
-TBD
+See [NOTES](https://github.com/vfeskov/link-too-big/blob/master/NOTES.md)
 
 ## License
 
