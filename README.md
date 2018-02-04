@@ -5,11 +5,11 @@ Ever got tired of them huge links? Just feed them to [libi.me](https://libi.me) 
 <img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/in-action.gif" width="382px" />
 
 I made this to:
-- Implemented highly scalable distributed architecture
-- Make the whole thing runnable with a single command
+- Implement highly scalable distributed architecture
+- Make the whole thing runnable on a single machine with a single command
 - Explore Ruby core API
 - See how fast Ruby can go, compare different ways vs. NodeJS
-- Explore [Redis](https://redis.io/) database
+- Explore Redis database
 - Explore [Poi](poi.js.org) with [Vue](https://vuejs.org/) + JSX
 - Make good UX
 
