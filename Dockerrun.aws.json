@@ -138,11 +138,11 @@
       "environment": [
         {
           "name": "VIRTUAL_HOST",
-          "value": "s.vfeskov.com"
+          "value": "link-too-big.vfeskov.com"
         },
         {
           "name": "LETSENCRYPT_HOST",
-          "value": "s.vfeskov.com"
+          "value": "link-too-big.vfeskov.com"
         },
         {
           "name": "REDIS_URL",
@@ -169,11 +169,11 @@
       "environment": [
         {
           "name": "VIRTUAL_HOST",
-          "value": "e.vfeskov.com"
+          "value": "libi.me"
         },
         {
           "name": "LETSENCRYPT_HOST",
-          "value": "e.vfeskov.com"
+          "value": "libi.me"
         },
         {
           "name": "REDIS_URL",
