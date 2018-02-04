@@ -3,7 +3,12 @@ export function loadList () {
     const text = window.localStorage.getItem('link-too-big');
     const list = JSON.parse(text);
     if (!Array.isArray(list)) { throw Error(); }
-    if (list.some(i => typeof i !== 'string')) { throw Error(); }
+    if (
+      list.some(i =>
+        !Array.isArray(i) ||
+        i.some(s => typeof s !== 'string')
+      )
+    ) { throw Error(); }
     return list;
   } catch (e) {
     return [];

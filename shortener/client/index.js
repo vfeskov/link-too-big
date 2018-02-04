@@ -59,14 +59,15 @@ new Vue({
             </div>
           )}
         </div>
-        {this.savedList.filter(l => l !== this.shortened).map((link, index) => (
-          <div key={link}>
+        {this.savedList.filter(i => i[1] !== this.shortened).map(([big, short], index) => (
+          <div key={short}>
             {index === 0 && (
               <p class="promo previously">
                 Previously on&nbsp;<strong>Link Too Big</strong>
               </p>
             )}
-            <shortened text={link}/>
+            <div class="big">{big}</div>
+            <shortened text={short}/>
           </div>
         ))}
         <github-link />
@@ -164,7 +165,8 @@ new Vue({
     },
 
     save () {
-      this.savedList = [this.shortened, ...this.savedList];
+      const item = [this.assumed, this.shortened];
+      this.savedList = [item, ...this.savedList];
       saveList(this.savedList);
     }
   }

@@ -154,3 +154,8 @@ fieldset {
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
+.big {
+  overflow: auto;
+  padding: 0.5rem 0;
+}
