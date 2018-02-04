@@ -1,4 +1,4 @@
-const { encode } = require('../../lib/id-encoding');
+const { encode, randomString } = require('../../lib/id-encoding');
 const db = require('./db');
 const { readBody, BodyLimitExceeded } = require('./read-body');
 const { EXPANDER_URL } = process.env;
@@ -24,8 +24,9 @@ class Handler {
       });
       if (!this.linkValid(link)) { throw new BadRequest(); }
       const escaped = encodeURI(link);
-      const id = await db.insert(escaped);
-      const short = `${EXPANDER_URL}/${encode(id)}`;
+      const random = await randomString();
+      const id = await db.insert(escaped, random);
+      const short = `${EXPANDER_URL}/${encode(id, random)}`;
       console.log('Shortened', short);
       this.respond(201, short);
     } catch (err) {

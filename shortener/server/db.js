@@ -9,10 +9,10 @@ bluebird.promisifyAll(redis.Multi.prototype);
 const db = redis.createClient(REDIS_URL);
 
 module.exports = {
-  async insert (link) {
+  async insert (link, random) {
     let id = await this.nextId();
     await db.multi()
-      .set(id, link)
+      .set(id, random + link)
       .set(LASTID, id)
       .execAsync();
     return id;

@@ -1,6 +1,6 @@
 # Bechnmark
 
-`expander` server receives requests like `/:key` and returns value from Redis matching that key. It was written in [three different ways](https://github.com/vfeskov/link-too-big/tree/master/expander).
+`expander` server receives requests like `/:key` and returns value from Redis matching that key. It was written in three different ways, see their [source code](https://github.com/vfeskov/link-too-big/tree/ec004dcac76958326183c11d56fc0d51ac45163a/expander)
 
 The benchmark targeted `expander` and was done on a brand new VPS - AWS EC2 instance:
 - Type: t2.micro
