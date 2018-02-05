@@ -59,6 +59,7 @@ new Vue({
             </div>
           )}
         </div>
+        <github-link hide={!this.savedList.length}/>
         {this.savedList.filter(i => i[1] !== this.shortened).map(([big, short], index) => (
           <div key={short}>
             {index === 0 && (
@@ -70,7 +71,6 @@ new Vue({
             <shortened text={short}/>
           </div>
         ))}
-        <github-link />
       </div>
     )
   },

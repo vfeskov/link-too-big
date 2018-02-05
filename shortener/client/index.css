@@ -137,8 +137,9 @@ fieldset {
 }
 
 .done-wrapper {
-  margin: 1rem 0 3rem;
-  min-height: 5rem;
+  margin: 1rem 0 2rem;
+  min-height: 4.75rem;
+  position: relative;
 }
 
 .pulse {
