@@ -1,7 +1,6 @@
-const { NS, decode } = require('../../lib/id-encoding');
 const db = require('./db');
 const { SHORTENER_URL } = process.env;
-const VALID_PATH = new RegExp(`^/[${NS.join('')}]+$`);
+const VALID_PATH = /^\/\d+$/;
 const REDIRECT = 301;
 
 module.exports = class Handler {
@@ -38,8 +37,7 @@ module.exports = class Handler {
   }
 
   id () {
-    const code = this.path.slice(1);
-    return decode(code);
+    return this.path.slice(1);
   }
 
   respond (status, extraHeaders = {}) {

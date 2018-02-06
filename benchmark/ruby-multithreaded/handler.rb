@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 require 'redis'
-require '../../lib/id_encoding'
 
 class Handler
-  VALID_PATH = Regexp.new("^/[#{IdEncoding::NS.join}]+$").freeze
+  VALID_PATH = %r{^/\d+$}
   DB = Redis.new(url: ENV['REDIS_URL'])
 
   def initialize(client)
@@ -34,8 +33,7 @@ class Handler
   end
 
   def id
-    code = @path[1..-1]
-    IdEncoding.decode code
+    @path[1..-1]
   end
 
   def not_found
