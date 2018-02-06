@@ -34,7 +34,7 @@ Then `wrk` was run for `1 minute` bombarding each `expander` server with request
 
 ### `ruby-event-machine`
 
-<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/wrk-ruby-event-machine.png" width="617px" />
+<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/wrk-ruby-event-machine.png" width="670px" />
 
 ### `nodejs`
 
