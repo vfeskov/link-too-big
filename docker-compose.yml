@@ -21,7 +21,7 @@ services:
   expander:
     build:
       context: .
-      dockerfile: expander/nodejs/Dockerfile
+      dockerfile: expander/Dockerfile
     environment:
       REDIS_URL: redis://db:6379
       SHORTENER_URL: http://localhost:20000
