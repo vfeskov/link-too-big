@@ -1,6 +1,6 @@
 # Bechnmark
 
-The first version of `expander` HTTP server was written in Ruby in 2 different ways and in NodeJS.
+The first version of `expander` HTTP server was written in Ruby in 2 different ways and in NodeJS, see [source code](https://github.com/vfeskov/link-too-big/tree/master/benchmark)
 
 The server responds to requests like `/:key`, e.g., `/123`, with values from Redis matching that key.
 
