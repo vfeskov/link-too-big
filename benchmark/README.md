@@ -16,13 +16,13 @@ The following packages were installed:
 - Redis
 - [wrk](https://github.com/wg/wrk) benchmarking tool
 
-`redis-server` was started and a single key-value was put in there using `redis-cli`: [screenshot](https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/redis.png)
+`redis-server` was started and a single key-value was put in there using `redis-cli`: [screenshot](https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/redis.png)
 
 One by one each version of `expander` was boot up and benchmarked. Here's how they were bootup and their responses:
 
-- [`ruby-multithreaded`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/start-ruby-multithreaded.png)
-- [`ruby-event-machine`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/start-ruby-event-machine.png)
-- [`nodejs`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/start-nodejs.png)
+- [`ruby-multithreaded`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/start-ruby-multithreaded.png)
+- [`ruby-event-machine`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/start-ruby-event-machine.png)
+- [`nodejs`](https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/start-nodejs.png)
 
 Then `wrk` was run for `1 minute` bombarding each `expander` server with requests using `100` threads and keeping `1000` simultaneous connections.
 
@@ -30,12 +30,12 @@ Then `wrk` was run for `1 minute` bombarding each `expander` server with request
 
 ### `ruby-multithreaded`
 
-<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/wrk-ruby-multithreaded.png" width="670px" />
+<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/wrk-ruby-multithreaded.png" width="670px" />
 
 ### `ruby-event-machine`
 
-<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/wrk-ruby-event-machine.png" width="670px" />
+<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/wrk-ruby-event-machine.png" width="670px" />
 
 ### `nodejs`
 
-<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/expander/benchmark/wrk-nodejs.png" width="676px" />
+<img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/wrk-nodejs.png" width="676px" />
