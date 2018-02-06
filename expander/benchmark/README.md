@@ -1,1 +1,1 @@
-# Moved, see -> [BENCHMARK](https://raw.githubusercontent.com/vfeskov/link-too-big/master/benchmark/README.md)
+# Moved, see -> [BENCHMARK](https://github.com/vfeskov/link-too-big/blob/master/benchmark/README.md)
