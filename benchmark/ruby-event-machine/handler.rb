@@ -48,7 +48,7 @@ class Handler
 
   def respond(code, extra_headers = '')
     now = Time.now.utc.strftime('%a, %d %b %Y %H:%M:%S GMT')
-    @connection.send_data "HTTP/1.1 #{code}\r\n" \
+    @connection.send_data "HTTP/1.1 #{code} Moved Permanently\r\n" \
                           "Content-Length: 0\r\n" \
                           "Connection: close\r\n" \
                           "Date: #{now}\r\n" \
