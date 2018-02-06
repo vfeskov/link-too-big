@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 require './db'
-require '../../lib/id_encoding'
 
 class Handler
-  VALID_PATH = Regexp.new("^/[#{IdEncoding::NS.join}]+$").freeze
+  VALID_PATH = %r{^/\d+$}
 
   def initialize(connection, headers)
     @connection = connection
@@ -31,8 +30,7 @@ class Handler
   end
 
   def id
-    code = @path[1..-1]
-    IdEncoding.decode code
+    @path[1..-1]
   end
 
   def not_found
@@ -49,9 +47,11 @@ class Handler
   end
 
   def respond(code, extra_headers = '')
-    @connection.send_data "HTTP/1.1 #{code}\r\n" \
+    now = Time.now.utc.strftime('%a, %d %b %Y %H:%M:%S GMT')
+    @connection.send_data "HTTP/1.1 #{code} Moved Permanently\r\n" \
                           "Content-Length: 0\r\n" \
                           "Connection: close\r\n" \
+                          "Date: #{now}\r\n" \
                           "#{extra_headers}" \
                           "\r\n"
     @connection.close_connection_after_writing

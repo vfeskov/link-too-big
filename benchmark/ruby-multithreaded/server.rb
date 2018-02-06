@@ -2,8 +2,6 @@
 require 'socket'
 require './handler'
 
-abort('SHORTENER_URL env variable is required') unless ENV['SHORTENER_URL']
-
 port = ENV['PORT'] || 10_000
 server = TCPServer.new('127.0.0.1', port)
 puts "Listening on #{port}"

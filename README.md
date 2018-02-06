@@ -32,7 +32,7 @@ I benchmarked HTTP server serving Redis values written with:
 - Ruby with event-machine
 - NodeJS
 
-See [BENCHMARK](https://github.com/vfeskov/link-too-big/tree/master/expander/benchmark/README.md)
+See [BENCHMARK](https://github.com/vfeskov/link-too-big/tree/master/benchmark/README.md)
 
 ## Notes
 
