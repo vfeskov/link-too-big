@@ -27,7 +27,28 @@ On the **first instance** `redis-server` was started and a single key-value was 
 
 On the **second instance** `wrk` command was run benchmarking every `expander` server 8 times for `10` minutes each, e.g., `wrk -d10m -t2 -c2 http://172.31.14.187:20000/286`
 
-## Result requests/second
+## Full [wrk.log](https://github.com/vfeskov/link-too-big/tree/master/benchmark/wrk.log)
+
+Server addresses were:
+- `http://172.31.14.187:10000` - `ruby-event-machine`
+- `http://172.31.14.187:20000` - `ruby-multithreaded`
+- `http://172.31.14.187:30000` - `nodejs`
+
+> I extracted some of the info below, I **fail** to understand it really, if someone can shed a light on what it all means I would appreciate it very much.
+
+## Thread average requests/second
+|wrk [args](https://github.com/wg/wrk#command-line-options)|[ruby-event-machine](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-event-machine)|[ruby-multithreaded](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-multithreaded)|[nodejs](https://github.com/vfeskov/link-too-big/tree/master/benchmark/nodejs)|
+|-|-|-|-|
+|`-t1 -c1`|`4.44k`|`3.91k`|`2.10k`|
+|`-t1 -c2`|`3.08k`|`1.12k`|`1.33k`|
+|`-t1 -c5`|`1.33k`|`1.14k`|`1.24k`|
+|`-t1 -c10`|`1.28k`|`1.11k`|`1.13k`|
+|`-t2 -c2`|`1.40k`|`807.90`|`1.05k`|
+|`-t5 -c5`|`411.64`|`574.12`|`324.11`|
+|`-t10 -c10`|`201.00`|`195.63`|`177.89`|
+|`-t10 -c100`|`198.08`|`175.88`|`188.68`|
+
+## Overall average requests/second
 |wrk [args](https://github.com/wg/wrk#command-line-options)|[ruby-event-machine](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-event-machine)|[ruby-multithreaded](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-multithreaded)|[nodejs](https://github.com/vfeskov/link-too-big/tree/master/benchmark/nodejs)|
 |-|-|-|-|
 |`-t1 -c1`|`4299.86`|`3894.52`|`1769.91`|
@@ -45,10 +66,7 @@ wrk -d10m -tX -cY http://benchmarked-server-address/286
 ```
 where `-t` is number of threads and `-c` is number of simultaneous connections.
 
-Full `wrk` logs can be found here: [wrk.log](https://github.com/vfeskov/link-too-big/tree/master/benchmark/wrk.log), server addresses were:
-- `http://172.31.14.187:10000` - `ruby-event-machine`
-- `http://172.31.14.187:20000` - `ruby-multithreaded`
-- `http://172.31.14.187:30000` - `nodejs`
+Full `wrk` logs can be found here: [wrk.log](https://github.com/vfeskov/link-too-big/tree/master/benchmark/wrk.log),
 
 ## Run your own benchmarks
 
