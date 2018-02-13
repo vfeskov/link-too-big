@@ -28,7 +28,7 @@ On the **first instance** `redis-server` was started and a single key-value was 
 On the **second instance** `wrk` command was run benchmarking every `expander` server 8 times for `10` minutes each, e.g., `wrk -d10m -t2 -c2 http://172.31.14.187:20000/286`
 
 ## Result requests/second
-|wrk [args](https://github.com/wg/wrk#command-line-options)|[Ruby EM](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-event-machine)|[Ruby Threads](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-multithreaded)|[Node.js](https://github.com/vfeskov/link-too-big/tree/master/benchmark/nodejs)|
+|wrk [args](https://github.com/wg/wrk#command-line-options)|[ruby-event-machine](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-event-machine)|[ruby-multithreaded](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-multithreaded)|[nodejs](https://github.com/vfeskov/link-too-big/tree/master/benchmark/nodejs)|
 |-|-|-|-|
 |`-t1 -c1`|`4299.86`|`3894.52`|`1769.91`|
 |`-t1 -c2`|`2874.67`|`91.43`|`1310.77`|
@@ -38,6 +38,7 @@ On the **second instance** `wrk` command was run benchmarking every `expander` s
 |`-t5 -c5`|`1667.64`|`228.10`|`145.61`|
 |`-t10 -c10`|`1560.22`|`443.37`|`391.76`|
 |`-t10 -c100`|`1861.85`|`1664.48`|`1785.36`|
+
 `-tX -cY` means benchmarking command was:
 ```
 wrk -d10m -tX -cY http://benchmarked-server-address/286
@@ -45,9 +46,9 @@ wrk -d10m -tX -cY http://benchmarked-server-address/286
 where `-t` is number of threads and `-c` is number of simultaneous connections.
 
 Full `wrk` logs can be found here: [wrk.log](https://github.com/vfeskov/link-too-big/tree/master/benchmark/wrk.log), server addresses were:
-- `http://172.31.14.187:10000` - Ruby EM
-- `http://172.31.14.187:20000` - Ruby Threads
-- `http://172.31.14.187:30000` - Node.js
+- `http://172.31.14.187:10000` - `ruby-event-machine`
+- `http://172.31.14.187:20000` - `ruby-multithreaded`
+- `http://172.31.14.187:30000` - `nodejs`
 
 ## Run your own benchmarks
 
