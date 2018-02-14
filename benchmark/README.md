@@ -34,7 +34,7 @@ Server addresses were:
 - `http://172.31.14.187:20000` - `ruby-multithreaded`
 - `http://172.31.14.187:30000` - `nodejs`
 
-> I extracted some of the info below, I **fail** to understand it really, if someone can shed a light on what it all means I would appreciate it very much, I will definitely credit you here, in the doc.
+> I extracted some of the info below, I **fail** to understand it really, if someone can shed a light on what it all means I would appreciate it very much, I will credit you here, in the doc. Will accept a pull request too
 
 ## Thread average requests/second
 |wrk [args](https://github.com/wg/wrk#command-line-options)|[ruby-event-machine](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-event-machine)|[ruby-multithreaded](https://github.com/vfeskov/link-too-big/tree/master/benchmark/ruby-multithreaded)|[nodejs](https://github.com/vfeskov/link-too-big/tree/master/benchmark/nodejs)|
