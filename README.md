@@ -1,5 +1,7 @@
 # Link Too Big [libi.me](https://libi.me)
 
+**⚠️ I had to shut it down to allocate more resources for my [other project](https://github.com/vfeskov/gitpunch). Submit an issue if you have any questions ⚠️**
+
 Ever got tired of them huge links? Just feed them to [libi.me](https://libi.me) and get super tiny ones instead
 
 Unlike https://bitly.com/ it supports internationalized links, e.g., http://президент.рф
