@@ -2,16 +2,14 @@
 # docker build -f expander/nodejs/Dockerfile .
 FROM node:8-alpine
 
-RUN mkdir -p /app/expander/nodejs
-WORKDIR /app/expander/nodejs
-ADD ./expander/nodejs/package.json ./package.json
-ADD ./expander/nodejs/package-lock.json ./package-lock.json
+RUN mkdir -p /app/expander
+WORKDIR /app/expander
+ADD ./expander/package.json ./package.json
+ADD ./expander/package-lock.json ./package-lock.json
 RUN npm install
 
-WORKDIR /app
-ADD ./expander/nodejs ./expander/nodejs
-ADD ./lib ./lib
-WORKDIR /app/expander/nodejs
+ADD ./expander .
+ADD ./lib ../lib
 
 CMD [ "npm", "start" ]
 

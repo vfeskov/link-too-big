@@ -1,4 +1,4 @@
-const { RND_STRLEN } = require('../../lib/id-encoding');
+const { RND_STRLEN } = require('../lib/id-encoding');
 const redis = require('redis');
 const bluebird = require('bluebird');
 const { REDIS_URL } = process.env;
