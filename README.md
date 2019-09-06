@@ -8,15 +8,6 @@ Unlike https://bitly.com/ it supports internationalized links, e.g., http://пр
 
 <img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/in-action.gif" width="382px" />
 
-I made this to:
-- Implement highly scalable distributed architecture
-- Make the whole thing runnable on a single machine with a single command
-- Explore Ruby core API
-- See how fast Ruby can go, compare different ways vs. NodeJS
-- Explore Redis database
-- Explore [Poi](poi.js.org) with [Vue](https://vuejs.org/) + JSX
-- Make good UX
-
 ## How to run
 
 Install Docker and do: `docker-compose up`, go to http://localhost:20000
