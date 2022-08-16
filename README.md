@@ -4,7 +4,7 @@
 
 Ever got tired of them huge links? Just feed them to [libi.me](https://libi.me) and get super tiny ones instead
 
-Unlike https://bitly.com/ it supports internationalized links, e.g., http://президент.рф
+Unlike https://bitly.com/ it supports internationalized links, e.g., http://한국.icom.museum
 
 <img src="https://raw.githubusercontent.com/vfeskov/link-too-big/master/in-action.gif" width="382px" />
 
